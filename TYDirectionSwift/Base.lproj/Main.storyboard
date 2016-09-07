@@ -72,6 +72,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fmu-Af-Bf0">
                         <barButtonItem key="rightBarButtonItem" title="GO" style="done" id="fg4-gn-OAn">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="ClickToGo:" destination="BYZ-38-t0r" id="PJ0-Sg-7hA"/>
                             </connections>
@@ -179,6 +180,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8oD-ui-n02">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

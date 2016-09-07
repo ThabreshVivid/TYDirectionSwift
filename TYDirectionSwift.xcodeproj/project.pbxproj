@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		001236821D7EE4C30004C0B5 /* GooglePlacesSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001236811D7EE4C30004C0B5 /* GooglePlacesSearchController.swift */; };
 		00B032EE1D7EC243007E2DC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B032ED1D7EC243007E2DC5 /* AppDelegate.swift */; };
 		00B032F01D7EC243007E2DC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B032EF1D7EC243007E2DC5 /* ViewController.swift */; };
 		00B032F31D7EC243007E2DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B032F11D7EC243007E2DC5 /* Main.storyboard */; };
@@ -19,6 +18,8 @@
 		00B0331E1D7EC383007E2DC5 /* DirectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0331D1D7EC383007E2DC5 /* DirectionManager.swift */; };
 		00B033201D7EC959007E2DC5 /* DirectionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0331F1D7EC959007E2DC5 /* DirectionDetail.swift */; };
 		00B033221D7ECF75007E2DC5 /* DirectionTbl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B033211D7ECF75007E2DC5 /* DirectionTbl.swift */; };
+		00FDFDE71D80184300BC216C /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDFDE61D80184300BC216C /* SearchResultsController.swift */; };
+		873F44DB6176A85A09A796F2 /* libPods-TYDirectionSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D2D42350FFD60982D2E86A /* libPods-TYDirectionSwift.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		001236811D7EE4C30004C0B5 /* GooglePlacesSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesSearchController.swift; sourceTree = "<group>"; };
 		00B032EA1D7EC243007E2DC5 /* TYDirectionSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TYDirectionSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B032ED1D7EC243007E2DC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00B032EF1D7EC243007E2DC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +57,10 @@
 		00B0331D1D7EC383007E2DC5 /* DirectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionManager.swift; sourceTree = "<group>"; };
 		00B0331F1D7EC959007E2DC5 /* DirectionDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionDetail.swift; sourceTree = "<group>"; };
 		00B033211D7ECF75007E2DC5 /* DirectionTbl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionTbl.swift; sourceTree = "<group>"; };
+		00FDFDE61D80184300BC216C /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
+		2C5130C4EC4E61EC738F2952 /* Pods-TYDirectionSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TYDirectionSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TYDirectionSwift/Pods-TYDirectionSwift.release.xcconfig"; sourceTree = "<group>"; };
+		71D2D42350FFD60982D2E86A /* libPods-TYDirectionSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TYDirectionSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78468ABC363918B04FAF5029 /* Pods-TYDirectionSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TYDirectionSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TYDirectionSwift/Pods-TYDirectionSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00B0331C1D7EC309007E2DC5 /* MapKit.framework in Frameworks */,
+				873F44DB6176A85A09A796F2 /* libPods-TYDirectionSwift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +98,8 @@
 				00B033011D7EC244007E2DC5 /* TYDirectionSwiftTests */,
 				00B0330C1D7EC244007E2DC5 /* TYDirectionSwiftUITests */,
 				00B032EB1D7EC243007E2DC5 /* Products */,
+				13CB944929FA331F550E8F15 /* Pods */,
+				07408492DC08591CD93429BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,7 +121,7 @@
 				00B0331D1D7EC383007E2DC5 /* DirectionManager.swift */,
 				00B0331F1D7EC959007E2DC5 /* DirectionDetail.swift */,
 				00B033211D7ECF75007E2DC5 /* DirectionTbl.swift */,
-				001236811D7EE4C30004C0B5 /* GooglePlacesSearchController.swift */,
+				00FDFDE61D80184300BC216C /* SearchResultsController.swift */,
 				00B032F11D7EC243007E2DC5 /* Main.storyboard */,
 				00B032F41D7EC243007E2DC5 /* Assets.xcassets */,
 				00B032F61D7EC243007E2DC5 /* LaunchScreen.storyboard */,
@@ -141,6 +148,23 @@
 			path = TYDirectionSwiftUITests;
 			sourceTree = "<group>";
 		};
+		07408492DC08591CD93429BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71D2D42350FFD60982D2E86A /* libPods-TYDirectionSwift.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13CB944929FA331F550E8F15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78468ABC363918B04FAF5029 /* Pods-TYDirectionSwift.debug.xcconfig */,
+				2C5130C4EC4E61EC738F2952 /* Pods-TYDirectionSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00B033121D7EC244007E2DC5 /* Build configuration list for PBXNativeTarget "TYDirectionSwift" */;
 			buildPhases = (
+				CC67C520DEEA388C259C3A28 /* 📦 Check Pods Manifest.lock */,
 				00B032E61D7EC243007E2DC5 /* Sources */,
 				00B032E71D7EC243007E2DC5 /* Frameworks */,
 				00B032E81D7EC243007E2DC5 /* Resources */,
+				C45B015CFD28A472912D58D5 /* 📦 Embed Pods Frameworks */,
+				B25C6ADAFDFA87F78605CB6C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,14 +294,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B25C6ADAFDFA87F78605CB6C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TYDirectionSwift/Pods-TYDirectionSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C45B015CFD28A472912D58D5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TYDirectionSwift/Pods-TYDirectionSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC67C520DEEA388C259C3A28 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00B032E61D7EC243007E2DC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				001236821D7EE4C30004C0B5 /* GooglePlacesSearchController.swift in Sources */,
 				00B033221D7ECF75007E2DC5 /* DirectionTbl.swift in Sources */,
 				00B033201D7EC959007E2DC5 /* DirectionDetail.swift in Sources */,
+				00FDFDE71D80184300BC216C /* SearchResultsController.swift in Sources */,
 				00B032F01D7EC243007E2DC5 /* ViewController.swift in Sources */,
 				00B032EE1D7EC243007E2DC5 /* AppDelegate.swift in Sources */,
 				00B0331E1D7EC383007E2DC5 /* DirectionManager.swift in Sources */,
@@ -419,6 +494,7 @@
 		};
 		00B033131D7EC244007E2DC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78468ABC363918B04FAF5029 /* Pods-TYDirectionSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TYDirectionSwift/Info.plist;
@@ -430,6 +506,7 @@
 		};
 		00B033141D7EC244007E2DC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C5130C4EC4E61EC738F2952 /* Pods-TYDirectionSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TYDirectionSwift/Info.plist;

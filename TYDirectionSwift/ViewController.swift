@@ -8,48 +8,74 @@
 
 import UIKit
 import MapKit
+import GoogleMaps
 
-class ViewController: UIViewController,UITextFieldDelegate {
+class ViewController: UIViewController,UITextFieldDelegate,UISearchBarDelegate, LocateOnTheMap {
+    var searchResultController:SearchResultsController!
+    var resultsArray = [String]()
+    var fromClicked = Bool()
     var mapManager = DirectionManager()
     var tableData = NSDictionary()
     var polyline: MKPolyline = MKPolyline()
-    let GoogleMapsAPIServerKey = "AIzaSyDchKp5BlxpFd_NOZVI7HgjvzHHm_vkhH0"
+    
     @IBOutlet weak var drawMap: MKMapView!
     @IBOutlet weak var txtTo: UITextField!
     @IBOutlet weak var txtFrom: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchResultController = SearchResultsController()
+        searchResultController.delegate = self
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
         textField .resignFirstResponder()
-        let controller = GooglePlacesSearchController(
-            apiKey: GoogleMapsAPIServerKey,
-            placeType: PlaceType.Address
-        )
         if textField.tag == 0 {
-            controller.didSelectGooglePlace { (place) -> Void in
-                print(place.description)
-                self.txtFrom.text = place.name
-                //Dismiss Search
-                controller.active = false
-            }
-        }else{
-            controller.didSelectGooglePlace { (place) -> Void in
-                print(place.description)
-                self.txtTo.text = place.name
-                //Dismiss Search
-                controller.active = false
+            fromClicked = true
+        }else
+        {
+            fromClicked = false
+        }
+        let searchController = UISearchController(searchResultsController: searchResultController)
+        searchController.searchBar.delegate = self
+        self.presentViewController(searchController, animated: true, completion: nil)
+    }
+    
+    func locateWithLongitude(lon: Double, andLatitude lat: Double, andTitle title: String) {
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            if self.fromClicked{
+                self.txtFrom.text = title
+                self.navigationItem.prompt = String(format: "From :%f,%f",lat,lon)
+            }else
+            {
+                self.txtTo.text = title
+                self.navigationItem.title = String(format: "TO :%f,%f",lat,lon)
             }
         }
-         presentViewController(controller, animated: true, completion: nil)
     }
+    
+    func searchBar(searchBar: UISearchBar,
+                   textDidChange searchText: String){
+        let placesClient = GMSPlacesClient()
+        placesClient.autocompleteQuery(searchText, bounds: nil, filter: nil) { (results, error:NSError?) -> Void in
+            self.resultsArray.removeAll()
+            if results == nil {
+                return
+            }
+            for result in results!{
+                if let result = result as? GMSAutocompletePrediction{
+                    self.resultsArray.append(result.attributedFullText.string)
+                }
+            }
+            self.searchResultController.reloadDataWithArray(self.resultsArray)
+        }
+    }
+
     
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
             let polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            polylineRenderer.strokeColor = UIColor.blueColor()
-            polylineRenderer.lineWidth = 5            
+            polylineRenderer.strokeColor = UIColor.init(colorLiteralRed: 0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            polylineRenderer.lineWidth = 3
             return polylineRenderer
         }
         return MKOverlayRenderer()

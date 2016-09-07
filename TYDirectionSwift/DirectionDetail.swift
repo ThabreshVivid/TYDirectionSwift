@@ -12,12 +12,15 @@ class DirectionDetail: UIViewController,UITableViewDelegate,UITableViewDataSourc
     var directionDetail = NSArray()
     var directionInfo = NSDictionary()
     var lblSrcDest = UILabel()
+   
     @IBOutlet weak var directTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.directTable.estimatedRowHeight = 44
         self.directTable.rowHeight = UITableViewAutomaticDimension
         print(self.directionInfo)
+        self.navigationItem.prompt = self.directionInfo .objectForKey("end_address") as? String
+        self.navigationItem.title = self.directionInfo .objectForKey("start_address") as? String
         self.directionDetail = directionInfo.objectForKey("steps") as! NSArray
     }
     
